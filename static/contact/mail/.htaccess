@@ -1,0 +1,9 @@
+# Apache ppp/cgi settigs
+
+# Probably not needed
+# php_admin_flag engine On
+
+<FilesMatch ".+\.php$">
+    SetHandler application/x-httpd-php
+</FilesMatch>
+

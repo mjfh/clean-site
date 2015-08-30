@@ -1,18 +1,43 @@
-name = "Startbootstrap Clean Blog"
-license = "Apache 2.0"
-licenselink = "https://github.com/humboldtux/startbootstrap-clean-blog/blob/master/LICENSE.md"
-description = "Startbootstrap Clean Blog"
-homepage = "https://github.com/humboldtux/startbootstrap-clean-blog"
-tags = ["blog", "bootstrap"]
-features = ["blog", "bootstrap"]
-min_version = 0.14
+#
+# Test site configuration
+#
+# -- jordan@teddy-net.com
+#
+# $Id$
+#
 
-[author]
-  name = "Benoît Benedetti"
-  homepage = "http://www.humboldtux.com"
+baseurl       = "http://localhost"
+canonifyurls  = true
+languageCode  = "en"
+title         = "Clean Site Test"
+paginate      = 10
 
-# original theme
-[original]
-  name = "Startbootstrap Clean Blog"
-  homepage = "http://startbootstrap.com/template-overviews/clean-blog/"
-  repo = "https://github.com/IronSummitMedia/startbootstrap-clean-blog"
+[params]
+  Title       = "Startbootstrap Clean Blog"
+  Description = "Startbootstrap Clean Blog"
+  DateForm    = "Mon, Jan 2, 2006"
+  Author      = "Jordan Hrycaj"
+  email       = "jordan@teddy-net.com"
+  contact     = "<testmail>@gmail.com"
+  Ganalytics  = "XX-00000000-0"
+
+[[params.social]]
+  title = "github"
+  url = "https://github.com/mjfh"
+[[params.social]]
+  title = "bitbucket"
+  url = "https://bitbucket.org/mjfh"
+[[params.social]]
+  title = "linkedin"
+  url = "http://uk.linkedin.com/in/jordanhrycaj"
+
+[[menu.main]]
+  name = "Archives"
+  url = "/post/"
+  weight = -180
+
+# Local Variables:
+# mode: toml
+# comment-column: 0
+# comment-start: "#"
+# End:
