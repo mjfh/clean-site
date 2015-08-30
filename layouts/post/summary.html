@@ -10,7 +10,11 @@
 	    {{ if .Params.author }}
 	    {{ if not (in .Params.suppress "author") }}
 	    By <a href="#">{{ .Params.author }}</a>
-	    {{ if not (in .Params.suppress "date") }}on{{ end }}
+	    {{ if not (in .Params.suppress "date") }}
+	    on
+	    {{ else }}
+	    <br />
+	    {{ end }}
 	    {{ end }}
 	    {{ end }}
 	    {{ if not (in .Params.suppress "date") }}
