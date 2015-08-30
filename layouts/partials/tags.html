@@ -1,1 +1,9 @@
-Tags {{ range .Params.tags }}<a href="/tags/{{ urlize . }}" >{{ lower . }}</a> {{ end }}
+Tags {{ range .Params.tags }}
+        <a href="/tags/{{ urlize . }}">{{ lower . }}</a> {{ end }}
+{{/*
+Local Variables:
+mode: web
+comment-column: 0
+comment-start: "{{/*"
+End:
+*/}}

@@ -1,1 +1,9 @@
-In {{ range .Params.categories }}<a href="/categories/{{ urlize . }}" >{{ title . }}</a>, {{ end }}
+In {{ range .Params.categories }}
+        <a href="/categories/{{ urlize . }}">{{ title . }}</a>, {{ end }}
+{{/*
+Local Variables:
+mode: web
+comment-column: 0
+comment-start: "{{/*"
+End:
+*/}}
