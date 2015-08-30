@@ -1,13 +1,41 @@
-               <div class="post-preview">
-                 <a href="{{ .Permalink }}">
-                      <h2 class="post-title">{{ .Title }}</h2>
-                      <h3 class="post-subtitle">{{ .Description }}</h3>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">{{ .Site.Params.Author }}</a> on {{ dateFormat .Site.Params.DateForm .Date }}
-                    <br />
-                    {{ partial "categories.html" .}}
-                    <br />
-                    {{ partial "tags.html" .}}
-                  </p>
-                </div>
-                <hr>
+
+    <div class="post-preview">
+	<a href="{{ .Permalink }}">
+	    <h2 class="post-title">{{ .Title }}</h2>
+	    {{ if .Description }}
+	    <h3 class="post-subtitle">{{ .Description }}</h3>
+	    {{ end }}
+	</a>
+	<p class="post-meta">
+	    {{ if .Params.author }}
+	    {{ if not (in .Params.suppress "author") }}
+	    By <a href="#">{{ .Params.author }}</a>
+	    {{ if not (in .Params.suppress "date") }}on{{ end }}
+	    {{ end }}
+	    {{ end }}
+	    {{ if not (in .Params.suppress "date") }}
+	    {{ dateFormat .Site.Params.DateForm .Date }}
+	    <br />
+	    {{ end }}
+	    {{ if .Params.categories }}
+	    {{ if not (in .Params.suppress "categories") }}
+	    {{ partial "categories.html" . }}
+	    <br />
+	    {{ end }}
+	    {{ end }}
+	    {{ if .Params.tags }}
+	    {{ if not (in .Params.suppress "tags") }}
+	    {{ partial "tags.html" . }}
+	    {{ end }}
+	    {{ end }}
+	</p>
+    </div>
+    <hr>
+
+{{/*
+Local Variables:
+mode: web
+comment-column: 0
+comment-start: "{{/*"
+End:
+*/}}
