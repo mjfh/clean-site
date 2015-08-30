@@ -38,8 +38,8 @@ Edit the config file theme.toml and set the contact address in the
 
 
    ```
-   \[params\]
-   contact = "<contact>@<address>.org"
+   [params]
+      contact = "<contact>@<address>.org"
    ```
 
 to an email adress of an account that will receive the contact
