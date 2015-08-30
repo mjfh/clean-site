@@ -18,59 +18,85 @@ email forwarder with some automation scripts bundled by a Makefile.
 
 Just use this package asis.
 
-### As is (without email forwarder)
+#### As is (without email forwarder)
 
-> hugo server --theme=theme.toml
+   ```
+   hugo server --theme=theme.toml
+   ```
 
-### As is + email forwarder
+#### As is + email forwarder
 
 You need GNU make installed or set the Makefile variables manually
 
-> SCRIPTS = scripts
-> CONFIG  = theme.toml
+   ```
+   SCRIPTS = scripts<br>
+   CONFIG  = theme.toml
+   ```
 
-Edit the config file theme.toml and set contact address in the \[params\]
-section to an email adress of an account that will receive the contact
+Edit the config file theme.toml and set the contact address in the
+\[params\] section
+
+
+   ```
+   \[params\]
+   contact = "<contact>@<address>.org"
+   ```
+
+to an email adress of an account that will receive the contact
 messages. Then run
 
-> make site
+   ```
+   make site
+   ```
 
-In theory that is it. A bit more detaild explanation of hat is going on is
-available with
+In theory that is it. A bit more detailed explanation of what this make
+command does is available with
 
-> make howto-site
+   ```
+   make howto-site
+   ```
 
 In practice you will have to set up your web server for testing so it can
 forward the email messages.
 
 In order to send a test mail you could run
 
-> make test-mail
+   ```
+   make test-mail
+   ```
 
 but this would most certainly not work as your mail forwarding process needs
 support from your web server (hugo won't do here). There are detailed setup
 instructions available with
 
-> make howto-test-mail
+   ```
+   make howto-test-mail
+   ```
 
 ## Theme setup
 
 Run
 
-> hugo new site my-site
-> mkdir -p themes/clean-site
-> git clone https://github.com/mjfh/clean-site.git themes/clean-site
-> cp themes/clean-site/Makefile .
-> (echo "theme='clean-site'";cat themes/clean-site/theme.toml) >config.toml
+   ```
+   hugo new site my-site
+   mkdir -p themes/clean-site
+   git clone https://github.com/mjfh/clean-site.git themes/clean-site
+   cp themes/clean-site/Makefile .
+   (echo "theme='clean-site'";cat themes/clean-site/theme.toml) >config.toml
+   ```
 
 Now the system is set up. Run
 
-> hugo server
+   ```
+   hugo server
+   ```
 
 in order to test it. You may want to copy some more test content
 from the theme as
 
-> cp themes/clean-site/content/*.md content/
+   ```
+   cp themes/clean-site/content/*.md content/
+   ```
 
 Now go back to the section \[As is + email forwarder\] in order to setup
 email.
