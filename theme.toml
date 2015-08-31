@@ -15,13 +15,22 @@ paginate      = 10
 [params]
   Title       = "Startbootstrap Clean Blog"
   Description = "Startbootstrap Clean Blog"
-# Categories  = "Cat:"
-# Tags        = "Tag:"
   DateForm    = "Mon, Jan 2, 2006"
   Author      = "Jordan Hrycaj"
   email       = "jordan@teddy-net.com"
   contact     = "<testmail>@gmail.com"
   Ganalytics  = "XX-00000000-0"
+
+# HTML <meta> settings
+# [params.meta]
+#   author      = "Jordan Hrycaj"
+#   description = "Startbootstrap Clean Blog"
+#   keywords    = "Startbootstrap Clean Blog"
+
+# Custom taxonomy labels
+# [params.label]
+#   Categories  = "Cat:"
+#   Tags        = "Tag:"
 
 [[params.social]]
   title = "github"
