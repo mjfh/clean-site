@@ -1,4 +1,9 @@
-Tags {{ range .Params.tags }}
+        {{ if .Site.Params.Tags }}
+        {{ title .Site.Params.Tags }}
+        {{ else }}
+        Tags
+        {{ end }}
+        {{ range .Params.tags }}
         <a href="/tags/{{ urlize . }}">{{ lower . }}</a> {{ end }}
 {{/*
 Local Variables:

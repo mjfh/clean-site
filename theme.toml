@@ -15,6 +15,8 @@ paginate      = 10
 [params]
   Title       = "Startbootstrap Clean Blog"
   Description = "Startbootstrap Clean Blog"
+# Categories  = "Cat:"
+# Tags        = "Tag:"
   DateForm    = "Mon, Jan 2, 2006"
   Author      = "Jordan Hrycaj"
   email       = "jordan@teddy-net.com"
