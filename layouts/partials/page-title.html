@@ -1,0 +1,20 @@
+			    {{ if .Site.Params.Title }}
+			    <h1>{{ title .Site.Params.Title }}</h1>
+			    {{ else if .Site.Title }}
+			    <h1>{{ title .Site.Title }}</h1>
+			    {{ else if .Title }}
+			    <h1>{{ title .Title }}</h1>
+			    {{ end }}
+			    {{ if .Site.Params.Description }}
+			    <hr class="small">
+			    <span class="subheading">
+				{{ title .Site.Params.Description }}
+			    </span>
+			    {{ end }}
+{{/*
+Local Variables:
+mode: web
+comment-column: 0
+comment-start: "{{/*"
+End:
+*/}}

@@ -8,15 +8,7 @@
 		<div class="row">
 		    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 			<div class="site-heading">
-			    {{ if .Site.Params.Title }}
-			    <h1>{{ title .Site.Params.Title }}</h1>
-			    {{ else }}
-			    <h1>{{ title .Site.Title }}</h1>
-			    {{ end }}
-			    <hr class="small">
-			    {{ if isset .Site.Params "Description" }}
-			    <span class="subheading">{{ title .Site.Params.Description }}</span>
-			    {{ end }}
+			    {{ partial "page-title.html" .}}
 			</div>
 		    </div>
 		</div>
@@ -41,7 +33,6 @@
 		</div>
 	    </div>
 	</div>
-
 {{ partial "footer.html" .}}
 {{/*
 Local Variables:
