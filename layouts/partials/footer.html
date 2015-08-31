@@ -39,8 +39,9 @@
     <!-- Custom Theme JavaScript -->
     <script src="{{ .Site.BaseURL }}/js/clean-blog.min.js"></script>
 
-    {{ if isset .Site.Params "Ganalytics" }}{{ partial "ga.html" . }}{{ end }}
-
+    {{ if isset .Site.Params "Ganalytics" }}
+    {{ partial "footer-ga.html" . }}
+    {{ end }}
 </body>
 </html>
 {{/*

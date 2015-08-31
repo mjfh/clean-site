@@ -14,12 +14,12 @@
 	    {{ end }}
 	    {{ if .Params.categories }}
 	    {{ if not (in .Params.suppress "categories") }}
-	    {{ partial "categories.html" . }}
+	    {{ partial "entry-item-category.html" . }}
 	    {{ end }}
 	    {{ end }}
 	    {{ if .Params.tags }}
 	    {{ if not (in .Params.suppress "tags") }}
-	    {{ partial "tags.html" . }}
+	    {{ partial "entry-item-tag.html" . }}
 	    {{ end }}
 	    {{ end }}
 {{/*
