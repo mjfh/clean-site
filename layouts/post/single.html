@@ -2,25 +2,26 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    {{ if isset .Params "image" }}<header class="intro-header" style="background-image: url('{{ .Site.BaseURL }}/{{ .Params.image }}')">
-      {{ else }}<header class="intro-header" style="background-image: url('{{ .Site.BaseURL }}/img/post-bg.jpg')">
-    {{ end }}
-      <div class="container">
-        <div class="row">
-           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-             <div class="post-heading">
-               <h1>{{ title .Title }}</h1>
-               <h2 class="subheading">{{ title .Description }}</h2>
-               <span class="meta">Posted by <a href="#">{{ .Site.Params.Author }}</a> on {{ dateFormat .Site.Params.DateForm .Date }}
-                 <br />
-                 {{ partial "categories.html" . }}
-                 <br />
-                 {{ partial "tags.html" . }}
-               </span>
-             </div>
-           </div>
-        </div>
-      </div>
+    <header class="intro-header"
+	    {{ if isset .Params "image" }}
+	    style="background-image: url('{{ .Site.BaseURL }}/{{ .Params.image }}')"
+	    {{ else }}
+	    style="background-image: url('{{ .Site.BaseURL }}/img/post-bg.jpg')"
+	    {{ end }}
+	    >
+	<div class="container">
+            <div class="row">
+		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+		    <div class="post-heading">
+			<h1>{{ title .Title }}</h1>
+			<h2 class="subheading">{{ title .Description }}</h2>
+			<span class="meta">
+			    {{ partial "major-list-entry.html" . }}
+			</span>
+		    </div>
+		</div>
+            </div>
+	</div>
     </header>
 
     <!-- Post Content -->
@@ -28,10 +29,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                  {{ .Content }}
+                    {{ .Content }}
                 </div>
             </div>
         </div>
     </article>
 
 {{ partial "footer.html" .}}
+{{/*
+Local Variables:
+mode: web
+comment-column: 0
+comment-start: "{{/*"
+End:
+*/}}

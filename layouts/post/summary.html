@@ -7,31 +7,7 @@
 	    {{ end }}
 	</a>
 	<p class="post-meta">
-	    {{ if .Params.author }}
-	    {{ if not (in .Params.suppress "author") }}
-	    By <a href="#">{{ .Params.author }}</a>
-	    {{ if not (in .Params.suppress "date") }}
-	    on
-	    {{ else }}
-	    <br />
-	    {{ end }}
-	    {{ end }}
-	    {{ end }}
-	    {{ if not (in .Params.suppress "date") }}
-	    {{ dateFormat .Site.Params.DateForm .Date }}
-	    <br />
-	    {{ end }}
-	    {{ if .Params.categories }}
-	    {{ if not (in .Params.suppress "categories") }}
-	    {{ partial "categories.html" . }}
-	    <br />
-	    {{ end }}
-	    {{ end }}
-	    {{ if .Params.tags }}
-	    {{ if not (in .Params.suppress "tags") }}
-	    {{ partial "tags.html" . }}
-	    {{ end }}
-	    {{ end }}
+	    {{ partial "major-list-entry.html" . }}
 	</p>
     </div>
     <hr>
