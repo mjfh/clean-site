@@ -30,12 +30,14 @@
 		    {{ range first 4 (where .Data.Pages "Type" "post") }}
 		    {{ .Render "summary"}}
 		    {{ end }}
+	            {{ if lt 4 (len (where .Data.Pages "Type" "post")) }}
 		    <!-- Pager -->
 		    <ul class="pager">
 			<li class="next">
 			    <a href="{{ .Site.BaseURL }}/post/">More &rarr;</a>
 			</li>
 		    </ul>
+		    {{ end }}
 		</div>
 	    </div>
 	</div>
