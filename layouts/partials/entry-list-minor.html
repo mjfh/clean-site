@@ -1,5 +1,5 @@
-	    {{ if .Params.author }}
-	    {{ if not (in .Params.suppress "author") }}
+            <!-- List Entry Item (minor, small layout) -->
+            {{ if and .Params.author (not (in .Params.suppress "author")) }}
 	    by <a href="#">{{ .Params.author }}</a>
 	    {{ if not (in .Params.suppress "date") }}
 	    on
@@ -7,20 +7,15 @@
 	    <br />
 	    {{ end }}
 	    {{ end }}
-	    {{ end }}
 	    {{ if not (in .Params.suppress "date") }}
 	    {{ dateFormat .Site.Params.DateForm .Date }}
 	    <br />
 	    {{ end }}
-	    {{ if .Params.categories }}
-	    {{ if not (in .Params.suppress "categories") }}
+	    {{ if and .Params.categories (not (in .Params.suppress "categories")) }}
 	    {{ partial "entry-item-category.html" . }}
 	    {{ end }}
-	    {{ end }}
-	    {{ if .Params.tags }}
-	    {{ if not (in .Params.suppress "tags") }}
+	    {{ if and .Params.tags (not (in .Params.suppress "tags")) }}
 	    {{ partial "entry-item-tag.html" . }}
-	    {{ end }}
 	    {{ end }}
 {{/*
 Local Variables:
