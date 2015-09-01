@@ -2,7 +2,14 @@
 
     <!-- Page Header -->
     <header class="intro-header"
-	    style="background-image: url('{{ .Site.BaseURL }}/img/contact-bg.jpg')">
+            {{ if isset .Params "image" }}
+            style="background-image: url('{{ .Site.BaseURL }}/{{ .Params.image }}')"
+            {{ else if .Site.Params.image.contact }}
+            style="background-image: url('{{ .Site.BaseURL }}/img/{{ .Site.Params.image.contact }}')"
+            {{ else }}
+            style="background-image: url('{{ .Site.BaseURL }}/img/contact-bg.jpg')"
+            {{ end }}
+            >
 	<div class="container">
 	    <div class="row">
 		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">

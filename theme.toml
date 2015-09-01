@@ -32,6 +32,12 @@ paginate      = 10
 #   Categories  = "Cat:"
 #   Tags        = "Tag:"
 
+# [params.image]
+#   home        = "home.png"
+#   post        = "post.png"
+#   contact     = "contact.png"
+#   about       = "about.png"
+
 [[params.social]]
   title = "github"
   url = "https://github.com/mjfh"

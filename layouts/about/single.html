@@ -2,7 +2,15 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('{{ .Site.BaseURL }}/img/about-bg.jpg')">
+    <header class="intro-header"
+            {{ if isset .Params "image" }}
+            style="background-image: url('{{ .Site.BaseURL }}/{{ .Params.image }}')"
+            {{ else if .Site.Params.image.about }}
+            style="background-image: url('{{ .Site.BaseURL }}/img/{{ .Site.Params.image.about }}')"
+            {{ else }}
+            style="background-image: url('{{ .Site.BaseURL }}/img/about-bg.jpg')"
+            {{ end }}
+            >
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">

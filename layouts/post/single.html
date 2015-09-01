@@ -5,6 +5,8 @@
     <header class="intro-header"
 	    {{ if isset .Params "image" }}
 	    style="background-image: url('{{ .Site.BaseURL }}/{{ .Params.image }}')"
+	    {{ else if .Site.Params.image.post }}
+            style="background-image: url('{{ .Site.BaseURL }}/img/{{ .Site.Params.image.post }}')"
 	    {{ else }}
 	    style="background-image: url('{{ .Site.BaseURL }}/img/post-bg.jpg')"
 	    {{ end }}
