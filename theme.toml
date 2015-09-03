@@ -38,6 +38,11 @@ paginate      = 10
 #   contact     = "contact.png"
 #   about       = "about.png"
 
+# [[params.script]]
+#   name = "clean-blog.custom"
+# [[params.script]]
+#   name = "other-custom-script"
+
 [[params.social]]
   title = "github"
   url = "https://github.com/mjfh"

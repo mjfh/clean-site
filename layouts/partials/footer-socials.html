@@ -1,0 +1,31 @@
+                    <ul class="list-inline text-center">
+                        {{ if .Site.Params.email }}
+                        <li>
+                            <a href="mailto:{{ .Site.Params.email }}">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        {{ end }}
+                        {{ if .Site.Params.social }}
+                        {{ range .Site.Params.social }}
+                        <li>
+                            <a href="{{ .url }}">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-{{ .title }} fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+			{{ end }}
+			{{ end }}
+                    </ul>
+{{/*
+Local Variables:
+mode: web
+comment-column: 0
+comment-start: "{{/*"
+End:
+*/}}

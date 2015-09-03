@@ -217,7 +217,7 @@ test "$#" -eq 1 ||
 test -s "$1" ||
     usage "No such configuration file: $1"
 
-cgi=`expr "$trg" : 'public/\(.*\)' \| "$2"`
+cgi=`expr "$trg" : 'public/\(.*\)' \| "$trg"`
 test -s "public/$cgi" ||
     usage "No such php mail forwarder script: \"public/$cgi\""
 

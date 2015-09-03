@@ -1,0 +1,32 @@
+    {{ $base := .Site.BaseURL }}
+
+    <!-- jQuery -->
+    <script src="{{ $base }}/js/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ $base }}/js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript (global config) -->
+    {{ if .Site.Params.script }}
+    {{ range .Site.Params.script }}
+    <script src="{{ $base }}/js/{{ .name }}.js"></script>
+    {{ end }}
+    {{ else }}
+    <script src="{{ .Site.BaseURL }}/js/clean-blog.min.js"></script>
+    {{ end }}
+
+    <!-- Custom Theme JavaScript (local config) -->
+    {{ range $name := .Params.script }}
+    <script src="{{ $base }}/js/{{ $name }}.js"></script>
+    {{ end }}
+
+    {{ if isset .Site.Params "Ganalytics" }}
+    {{ partial "footer-ga.html" . }}
+    {{ end }}
+{{/*
+Local Variables:
+mode: web
+comment-column: 0
+comment-start: "{{/*"
+End:
+*/}}
