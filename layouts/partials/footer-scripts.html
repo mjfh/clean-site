@@ -1,23 +1,21 @@
-    {{ $base := .Site.BaseURL }}
-
     <!-- jQuery -->
-    <script src="{{ $base }}/js/jquery.min.js"></script>
+    <script src="{{ "/js" | relURL }}/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="{{ $base }}/js/bootstrap.min.js"></script>
+    <script src="{{ "/js" | relURL }}/bootstrap.min.js"></script>
 
     <!-- Custom Theme JavaScript (global config) -->
     {{ if .Site.Params.script }}
     {{ range .Site.Params.script }}
-    <script src="{{ $base }}/js/{{ .name }}.js"></script>
+    <script src="{{ "/js" | relURL }}/{{ .name }}.js"></script>
     {{ end }}
     {{ else }}
-    <script src="{{ .Site.BaseURL }}/js/clean-blog.min.js"></script>
+    <script src="{{ "/js" | relURL }}/clean-blog.min.js"></script>
     {{ end }}
 
     <!-- Custom Theme JavaScript (local config) -->
     {{ range $name := .Params.script }}
-    <script src="{{ $base }}/js/{{ $name }}.js"></script>
+    <script src="{{ "/js" | relURL }}/{{ $name }}.js"></script>
     {{ end }}
 
     {{ if isset .Site.Params "Ganalytics" }}

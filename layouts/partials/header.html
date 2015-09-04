@@ -27,15 +27,15 @@
     {{ end }}
 
     <!-- Bootstrap Core CSS -->
-    <link href="{{ .Site.BaseURL }}/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{  "/css" | relURL }}/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="{{ .Site.BaseURL }}/css/clean-blog.min.css" rel="stylesheet">
-    <link href="{{ .Site.BaseURL }}/css/fixup.css" rel="stylesheet">
+    <link href="{{  "/css" | relURL }}/clean-blog.min.css" rel="stylesheet">
+    <link href="{{  "/css" | relURL }}/fixup.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="{{ .Site.BaseURL }}/css/font-googleapis.css" rel="stylesheet" type="text/css">
+    <link href="{{  "/css" | relURL }}/font-googleapis.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

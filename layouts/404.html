@@ -2,12 +2,12 @@
 
     <!-- Page Header -->
     <header class="intro-header"
-	    {{ if .Site.Params.image.home }}
-	    style="background-image: url('{{ .Site.BaseURL }}/img/{{ .Site.Params.image.home }}')"
-	    {{ else }}
-	    style="background-image: url('{{ .Site.BaseURL }}/img/home-bg.jpg')"
-	    {{ end }}
-	    >
+            {{ if .Site.Params.image.home }}
+            style="background-image: url('{{ "/img" | relURL }}/{{ .Site.Params.image.home }}')"
+            {{ else }}
+            style="background-image: url('{{ "/img" | relURL }}/home-bg.jpg')"
+            {{ end }}
+            >
         {{ partial "header-title-404.html" .}}
     </header>
 
@@ -15,13 +15,13 @@
     <div class="container">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-preview">
-                <p class="post-meta"><a href="{{ .URL }}">Index</a>
-                    <br />
+                <p class="post-meta">
+                    <a href="{{ .URL }}">Index</a><br />
                 </p>
             </div>
             <div class="post-preview">
-                <p class="post-meta"><a href="{{ .Site.BaseURL }}/post/">Archives</a>
-                    <br />
+                <p class="post-meta">
+                    <a href="{{ "/post" | relURL }}/">Archives</a><br />
                 </p>
             </div>
         </div>

@@ -3,11 +3,11 @@
     <!-- Page Header -->
     <header class="intro-header"
             {{ if isset .Params "image" }}
-            style="background-image: url('{{ .Site.BaseURL }}/{{ .Params.image }}')"
+            style="background-image: url('{{ "/" | relURL }}{{ .Params.image }}')"
             {{ else if .Site.Params.image.contact }}
-            style="background-image: url('{{ .Site.BaseURL }}/img/{{ .Site.Params.image.contact }}')"
+            style="background-image: url('{{ "/img" | relURL }}/{{ .Site.Params.image.contact }}')"
             {{ else }}
-            style="background-image: url('{{ .Site.BaseURL }}/img/contact-bg.jpg')"
+            style="background-image: url('{{ "/img" | relURL }}/contact-bg.jpg')"
             {{ end }}
             >
 	{{ partial "header-title-contact.html" .}}

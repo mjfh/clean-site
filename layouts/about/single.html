@@ -4,11 +4,11 @@
     <!-- Set your background image for this header on the line below. -->
     <header class="intro-header"
             {{ if isset .Params "image" }}
-            style="background-image: url('{{ .Site.BaseURL }}/{{ .Params.image }}')"
+            style="background-image: url('{{ "/" | relURL }}{{ .Params.image }}')"
             {{ else if .Site.Params.image.about }}
-            style="background-image: url('{{ .Site.BaseURL }}/img/{{ .Site.Params.image.about }}')"
+            style="background-image: url('{{ "/img" | relURL }}/{{ .Site.Params.image.about }}')"
             {{ else }}
-            style="background-image: url('{{ .Site.BaseURL }}/img/about-bg.jpg')"
+            style="background-image: url('{{ "/img" | relURL }}/about-bg.jpg')"
             {{ end }}
             >
 	{{ partial "header-title-about.html" .}}

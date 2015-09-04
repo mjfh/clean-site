@@ -2,12 +2,12 @@
 
     <!-- Taxonomy Page Header -->
     <header class="intro-header"
-	    {{ if .Site.Params.image.home }}
-	    style="background-image: url('{{ .Site.BaseURL }}/img/{{ .Site.Params.image.home }}')"
-	    {{ else }}
-	    style="background-image: url('{{ .Site.BaseURL }}/img/home-bg.jpg')"
-	    {{ end }}
-	    >
+            {{ if .Site.Params.image.home }}
+            style="background-image: url('{{  "/img" | relURL }}/{{ .Site.Params.image.home }}')"
+            {{ else }}
+            style="background-image: url('{{  "/img" | relURL }}/home-bg.jpg')"
+            {{ end }}
+            >
         {{ partial "header-title-taxonomy.html" .}}
     </header>
 
