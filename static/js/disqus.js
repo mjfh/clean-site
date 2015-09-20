@@ -14,7 +14,7 @@
  *   Global theme/config file parameter settings:
  *
  *     [params]
- *        Disqus = "disqus_shortname"
+ *        Debate = "disqus_shortname"
  *
  *     [[params.script]]
  *        name = "disqus.js"
@@ -22,16 +22,16 @@
  *   In the front matter of a contens file:
  *
  *     # activate DISQUS for this particular post
- *     disqusid = "disqus_identifier"
+ *     debateid = "disqus_identifier"
  *
  * $Id$
  *
  * -- jordan
  */
 $(document).ready (function () {
-    var tooltip = '"Import external discussion list from DISQUS where you can ' +
-                  'comment on this post. This also enables analytics functionality, ' +
-	          'e.g. from Google."';
+    var tooltip = '"Import external discussion list from DISQUS where ' +
+                  'you can comment on this post. This also enables ' +
+	          'analytics functionality, e.g. from Google."';
     var button  = '<a class="btn btn-sm btn-default" data-toggle="tooltip" ' +
 	          'data-placement="top" title=' + tooltip + '><img ' +
                   'src=/img/disqus.png alt="DISQUS"></a>';

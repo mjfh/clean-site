@@ -1,4 +1,4 @@
-    {{ if and .Site.Params.Disqus .Params.disqusid }}
+    {{ if and .Site.Params.Debate .Params.debateid }}
     <div class="container">
         <div class="row">
             <div id="disqus_thread"
@@ -6,7 +6,7 @@
                 <noscript>
                     <table border="1"><tr><td>
                         Please enable JavaScript if you like to take part
-                        in the discussion.<br>This funcionality will be
+                        in the discussion.<br>This functionality will be
                         externally provided by <a
                         href="//en.wikipedia.org/wiki/Disqus"
                         rel="nofollow">DISQUS</a>.
@@ -16,8 +16,8 @@
         </div>
     </div>
     <script type="text/javascript">
-    var disqus_shortname  = '{{ .Site.Params.Disqus }}';
-    var disqus_identifier = '{{ .Params.disqusid }}';
+    var disqus_shortname  = '{{ .Site.Params.Debate }}';
+    var disqus_identifier = '{{ .Params.debateid }}';
     </script>
     {{ end }}
 {{/*

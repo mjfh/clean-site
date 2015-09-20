@@ -20,7 +20,7 @@ paginate      = 10
   email       = "jordan@teddy-net.com"
   contact     = "<testmail>@gmail.com"
   Ganalytics  = "XX-00000000-0"
-# Disqus      = "shortname"
+# Debateid    = "shortname"
 
 # HTML <meta> settings
 # [params.meta]
