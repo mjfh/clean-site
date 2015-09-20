@@ -19,3 +19,12 @@ form #contact-address,
 form #contact-message {
     /* custom settings */
 }
+
+/* discussion list activation */
+#disqus_thread a {
+    border: 0 none;
+    padding: 0 0 0 0;
+    margin-bottom: 2.4em;
+}
+
+/* End */

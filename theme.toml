@@ -20,6 +20,7 @@ paginate      = 10
   email       = "jordan@teddy-net.com"
   contact     = "<testmail>@gmail.com"
   Ganalytics  = "XX-00000000-0"
+# Disqus      = "shortname"
 
 # HTML <meta> settings
 # [params.meta]
@@ -39,19 +40,21 @@ paginate      = 10
 #   about       = "about.png"
 
 # [[params.script]]
+#   name = "disqus"
+# [[params.script]]
 #   name = "clean-blog.custom"
 # [[params.script]]
 #   name = "other-custom-script"
 
 [[params.social]]
   title = "github"
-  url = "https://github.com/mjfh"
+  url = "//github.com/mjfh"
 [[params.social]]
   title = "bitbucket"
-  url = "https://bitbucket.org/mjfh"
+  url = "//bitbucket.org/mjfh"
 [[params.social]]
   title = "linkedin"
-  url = "http://uk.linkedin.com/in/jordanhrycaj"
+  url = "//uk.linkedin.com/in/jordanhrycaj"
 
 [[menu.main]]
   name = "Archives"

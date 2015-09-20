@@ -1,0 +1,29 @@
+    {{ if and .Site.Params.Disqus .Params.disqusid }}
+    <div class="container">
+        <div class="row">
+            <div id="disqus_thread"
+                class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <noscript>
+                    <table border="1"><tr><td>
+                        Please enable JavaScript if you like to take part
+                        in the discussion.<br>This funcionality will be
+                        externally provided by <a
+                        href="//en.wikipedia.org/wiki/Disqus"
+                        rel="nofollow">DISQUS</a>.
+                    </tr></tr></table>
+                </noscript>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    var disqus_shortname  = '{{ .Site.Params.Disqus }}';
+    var disqus_identifier = '{{ .Params.disqusid }}';
+    </script>
+    {{ end }}
+{{/*
+Local Variables:
+mode: web
+comment-column: 0
+comment-start: "{{/*"
+End:
+*/}}
