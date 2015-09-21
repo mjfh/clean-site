@@ -1,23 +1,35 @@
-    {{ if and .Site.Params.Debate .Params.debateid }}
+    {{ if and .Params.debate_id .Site.Params.debate.provider .Site.Params.debate.forum }}
     <div class="container">
         <div class="row">
-            <div id="disqus_thread"
+            <div id="debate-sink"
                 class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <noscript>
                     <table border="1"><tr><td>
-                        Please enable JavaScript if you like to take part
-                        in the discussion.<br>This functionality will be
-                        externally provided by <a
-                        href="//en.wikipedia.org/wiki/Disqus"
-                        rel="nofollow">DISQUS</a>.
+                        Please enable JavaScript if you like to take
+                        part in the discussion.<br>This functionality
+                        will be externally provided by
+                        {{ if .Params.debate_provider }}
+                        {{ .Params.debate_provider }}.
+                        {{ else }}
+                        {{ .Site.Params.debate.provider }}.
+                        {{ end }}
                     </tr></tr></table>
                 </noscript>
             </div>
         </div>
     </div>
     <script type="text/javascript">
-    var disqus_shortname  = '{{ .Site.Params.Debate }}';
-    var disqus_identifier = '{{ .Params.debateid }}';
+    {{ if .Params.debate_provider }}
+    var debate_provider = '{{      .Params.debate_provider | lower }}';
+    {{ else }}
+    var debate_provider = '{{ .Site.Params.debate.provider | lower }}';
+    {{ end }}
+    {{ if .Params.debate_forum }}
+    var debate_forum_id = '{{      .Params.debate_forum }}';
+    {{ else }}
+    var debate_forum_id = '{{ .Site.Params.debate.forum }}';
+    {{ end }}
+    var debate_post_id  = '{{ .Params.debate_id }}';
     </script>
     {{ end }}
 {{/*

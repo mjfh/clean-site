@@ -18,6 +18,15 @@
     <script src="{{ "/js" | relURL }}/{{ $name }}.js"></script>
     {{ end }}
 
+    <!-- Debate/discussion provider JavaScript (local config) -->
+    {{ if and .Params.debate_id .Site.Params.debate.script }}
+    {{ if .Params.debate_script }}
+    <script src="{{ "/js" | relURL }}/{{ .Params.debate_script }}.js"></script>
+    {{ else }}
+    <script src="{{ "/js" | relURL }}/{{ .Site.Params.debate.script }}.js"></script>
+    {{ end }}
+    {{ end }}
+
     {{ if isset .Site.Params "Ganalytics" }}
     {{ partial "footer-ga.html" . }}
     {{ end }}

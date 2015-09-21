@@ -20,7 +20,12 @@ paginate      = 10
   email       = "jordan@teddy-net.com"
   contact     = "<testmail>@gmail.com"
   Ganalytics  = "XX-00000000-0"
-# Debateid    = "shortname"
+
+# [params.debate]
+# # provider  = "IntenseDebate"
+#   provider  = "DISQUS"
+#   forumid   = "<your-forum-id>"
+#   script    = "debate"
 
 # HTML <meta> settings
 # [params.meta]
@@ -39,8 +44,6 @@ paginate      = 10
 #   contact     = "contact.png"
 #   about       = "about.png"
 
-# [[params.script]]
-#   name = "disqus"
 # [[params.script]]
 #   name = "clean-blog.custom"
 # [[params.script]]
