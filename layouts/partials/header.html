@@ -13,6 +13,9 @@
     {{ if .Site.Params.meta.author }}
     <meta name="author" content="{{ .Site.Params.meta.author }}">
     {{ end }}
+    {{ if .Site.Params.image.favicon }}
+    <link rel="shortcut icon" type="image/x-icon" href="{{ "/img" | relURL }}/{{ .Site.Params.image.favicon }}">
+    {{ end }}
 
     <title>
 	{{ .Title }}

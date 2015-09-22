@@ -42,6 +42,7 @@ paginate      = 10
 #   post        = "post.png"
 #   contact     = "contact.png"
 #   about       = "about.png"
+#   favicon     = "favicon.ico"
 
 # [[params.script]]
 #   name = "clean-blog.custom"
