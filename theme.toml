@@ -22,8 +22,7 @@ paginate      = 10
   Ganalytics  = "XX-00000000-0"
 
 # [params.debate]
-# # provider  = "IntenseDebate"
-#   provider  = "DISQUS"
+#   provider  = "<your-debate-provider>"
 #   forumid   = "<your-forum-id>"
 #   script    = "debate"
 

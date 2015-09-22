@@ -73,6 +73,23 @@ instructions available with
    make howto-test-mail
    ```
 
+#### As is with external blog/debate provider
+
+Uncomment the [params.meta] section in your configuration file, set
+the "provider" field to your favourite devate provider you signed
+up for (I support DISQUS, IntenseDebate, BurnZone, and LiveFyre).
+From your debate provider you will get a blog or forum id which goes
+into the "forumid" field.
+
+To activate comments (or a debate) for a particular post page add
+the variable debate_id="00001" in the font matter of your post. The
+value "00001" identifies the particular discussion board to be
+displayed on your page.
+
+See static/js/debate.js for the implementation of the discussion
+board. You will also find bit's pieces in the footer snippets in
+the layout/partial folder.
+
 ## Theme setup
 
 Run
