@@ -3,7 +3,7 @@
     <!-- Page Header -->
     <header class="intro-header"
             {{ if isset .Params "image" }}
-            style="background-image: url('{{ "/img" | relURL }}{{ .Params.image }}')"
+            style="background-image: url('{{ "/img" | relURL }}/{{ .Params.image }}')"
             {{ else if .Site.Params.image.contact }}
             style="background-image: url('{{ "/img" | relURL }}/{{ .Site.Params.image.contact }}')"
             {{ else }}
