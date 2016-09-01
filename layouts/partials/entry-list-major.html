@@ -2,15 +2,31 @@
             {{ if and .Params.author (not (in .Params.suppress "author")) }}
 	    By <a href="#">{{ .Params.author }}</a>
 	    {{ if not (in .Params.suppress "date") }}
+	    {{ if not (in .Params.suppress "updated") }}
+	    {{ if .Params.updated }}
+	    <br />
+	    Date:
+	    {{ else }}
 	    on
+	    {{ end }}
+	    {{ else }}
+	    on
+	    {{ end }}
 	    {{ else }}
 	    <br />
 	    {{ end }}
 	    {{ end }}
+
 	    {{ if not (in .Params.suppress "date") }}
 	    {{ dateFormat .Site.Params.DateForm .Date }}
+	    {{ if not (in .Params.suppress "updated") }}
+	    {{ if .Params.updated }}
+	    (updated {{ dateFormat .Site.Params.DateForm .Params.updated }})
+	    {{ end }}
+	    {{ end }}
 	    <br />
 	    {{ end }}
+
 	    {{ if and .Params.categories (not (in .Params.suppress "categories")) }}
 	    {{ partial "entry-item-category.html" . }}
 	    <br />
