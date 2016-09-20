@@ -76,7 +76,7 @@ $(document).ready (function () {
 	    return {
 		sslok: true,
 		name: "DISQUS",
-		info: ('en.wikipedia.org/wiki/Disqus' +
+		info: ('//en.wikipedia.org/wiki/Disqus' +
 		       '#Criticism_and_privacy_concerns'),
 
 		enable: function () {
